@@ -1,5 +1,6 @@
 
 import { Calendar, TrendingUp, Users, Award, ArrowRight, Activity } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   const stats = [
@@ -51,9 +52,11 @@ export default function Home() {
               Advanced treatment and rehabilitation for athletes at every level
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="px-8 py-3 bg-card text-foreground rounded-lg font-semibold hover:shadow-lg transition-all">
-                Book Appointment
-              </button>
+              <Link to="/signup">
+                <button className="px-8 py-3 bg-card text-foreground rounded-lg font-semibold hover:shadow-lg transition-all">
+                  Book Appointment
+                </button>
+              </Link>
               <button className="px-8 py-3 bg-primary-foreground/10 text-primary-foreground border-2 border-primary-foreground/20 rounded-lg font-semibold hover:bg-primary-foreground/20 transition-all">
                 Learn More
               </button>
@@ -122,9 +125,11 @@ export default function Home() {
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Join hundreds of athletes who trust us with their sports medicine needs
           </p>
-          <button className="px-8 py-4 bg-card text-foreground rounded-lg font-semibold text-lg hover:shadow-xl transition-all">
-            Get Started Today
-          </button>
+          <Link to="/signup">
+            <button className="px-8 py-4 bg-card text-foreground rounded-lg font-semibold text-lg hover:shadow-xl transition-all">
+              Get Started Today
+            </button>
+          </Link>
         </div>
       </section>
     </div>

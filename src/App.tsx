@@ -7,6 +7,8 @@ import Treatments from './pages/Treatments';
 import Athletes from './pages/Athletes';
 import Resources from './pages/Resources';
 import Profile from './pages/Profile';
+import SignUp from './pages/SignUp';
+import { Toaster } from './components/ui/toaster';
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
           <Route path="resources" element={<Resources />} />
           <Route path="profile" element={<Profile />} />
         </Route>
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
+      <Toaster />
     </Router>
   );
 }
