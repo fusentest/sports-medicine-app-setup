@@ -1,6 +1,7 @@
 
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Activity, Calendar, Stethoscope, Users, BookOpen, User } from 'lucide-react';
+import { Button } from './ui/button';
 
 export default function Layout() {
   const location = useLocation();
@@ -43,6 +44,9 @@ export default function Layout() {
                   </Link>
                 );
               })}
+                <Link to="/signup">
+                  <Button>Sign Up</Button>
+                </Link>
             </nav>
           </div>
         </div>
