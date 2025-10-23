@@ -1,13 +1,14 @@
 
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { Activity, Calendar, Stethoscope, Users, BookOpen, User } from 'lucide-react';
+import { Activity, Calendar, Stethoscope, Users, BookOpen, User, Heart } from 'lucide-react';
 import { Button } from './ui/button';
 
 export default function Layout() {
   const location = useLocation();
-  
+
   const navigation = [
     { name: 'Home', path: '/', icon: Activity },
+    { name: 'Biometrics', path: '/biometrics', icon: Heart },
     { name: 'Appointments', path: '/appointments', icon: Calendar },
     { name: 'Treatments', path: '/treatments', icon: Stethoscope },
     { name: 'Athletes', path: '/athletes', icon: Users },
@@ -26,7 +27,7 @@ export default function Layout() {
                 SportsMed Pro
               </span>
             </Link>
-            
+
             <nav className="hidden md:flex items-center space-x-6">
               {navigation.map((item) => {
                 const Icon = item.icon;
@@ -44,9 +45,9 @@ export default function Layout() {
                   </Link>
                 );
               })}
-                <Link to="/signup">
-                  <Button>Sign Up</Button>
-                </Link>
+              <Link to="/signup">
+                <Button>Sign Up</Button>
+              </Link>
             </nav>
           </div>
         </div>

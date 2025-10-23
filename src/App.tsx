@@ -8,6 +8,8 @@ import Athletes from './pages/Athletes';
 import Resources from './pages/Resources';
 import Profile from './pages/Profile';
 import SignUp from './pages/SignUp';
+import Biometrics from './pages/Biometrics';
+import BiometricsConsent from './pages/BiometricsConsent';
 import { Toaster } from './components/ui/toaster';
 
 function App() {
@@ -21,8 +23,10 @@ function App() {
           <Route path="athletes" element={<Athletes />} />
           <Route path="resources" element={<Resources />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="biometrics" element={<Biometrics />} />
         </Route>
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/biometrics/consent" element={<BiometricsConsent />} />
       </Routes>
       <Toaster />
     </Router>
